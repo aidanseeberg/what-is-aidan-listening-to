@@ -1,0 +1,179 @@
+
+body {
+    background-color: #242423;
+    color: #FCEFEF;
+    font-family: 'Press Start 2P';
+    margin: 2%  0%;
+}
+
+
+/* heading */
+h1 {
+    font-size: 1.25em;
+    vertical-align: middle;
+    line-height: 150%;
+}
+
+/* section headers */
+h2{
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+/* period duration */
+h3 {
+    font-family: 'Press Start 2P';
+
+}
+
+/* about description */
+h4 {
+    line-height: 200%;
+    display: inline;
+    font-size: .9em;
+}
+/* disclaimer */
+h5 {
+font-size:0.5em;
+margin: 1% 0 0 0;
+text-align:right;
+}
+h6 {
+    font-size: 1em;
+    line-height:105%;
+    margin: 30px 0;
+}
+
+.u-yellow {
+    text-decoration: underline;
+    text-decoration-thickness: .3em;
+    text-decoration-color: #F6AE2D;
+}
+
+
+.u-red{
+    text-decoration: underline;
+    text-decoration-thickness: .3em;
+    text-decoration-color: #E86252;
+}
+
+.border{
+    border-style: solid;
+    border-width: .25em;
+}
+
+.green {
+    color:#41EAD4;
+}
+
+
+.border-green{
+    border-color:#41EAD4;
+
+}
+
+.blue{
+    color:#3993DD;
+}
+
+.border-blue{
+    border-color: #3993DD;
+}
+
+.purple{
+    color:#9BA2FF;
+}
+
+.border-purple{
+    border-color: #9BA2FF;
+}
+
+.red {
+    color: #E86252;
+}
+
+.border-red {
+    border-color: #E86252;
+}
+
+.yellow{
+    color: #F6AE2D;
+}
+.border-yellow{
+    border-color: #F6AE2D;
+}
+.pink {
+    color: #BD4089;
+}
+
+.border-pink {
+    border-color: #BD4089;
+}
+
+.section {
+    margin-bottom: 4%;
+    padding: 1% 2%;
+    margin: 0 2% 2% 2%;
+}
+.right{
+    text-align:right;
+}
+
+.current{
+    padding-bottom: 1%;
+}
+.tracks{padding-bottom:0;}
+
+
+a {
+    color: #FCEFEF;
+    text-decoration: none;
+}
+
+
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: inherit;
+    color: #FCEFEF;
+    border: none;
+    cursor: pointer;
+    height:inherit;
+    height:max-content;
+    margin:0;
+    padding:0;
+    font-size: .9em;
+    font-family: 'Press Start 2P';
+  }
+  
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'Press Start 2P';
+    margin:0;
+    padding:0;
+    line-height: 200%;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #242423;
+    min-width: 155px;
+    box-shadow: 0px 12px 12px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: #FCEFEF;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}

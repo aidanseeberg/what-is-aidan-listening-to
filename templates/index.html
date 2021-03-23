@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aidan's spotify</title>
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/arcade.css') }}">
+    <!--JS-->
+    <script>
+        function myFunction() {
+            document.getElementById("period-dropdown").classList.toggle("show");
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- welcome -->
+
+    <div class='section current border border-red'>
+        <div class='section-heading'>
+            <h2><span class='red'>#</span> NOW PLAYING</h2>
+        </div>
+        <div class="now-playing">
+            <h4><span class='red'>| </span><a target='_blank' href={{report['now'][1]}}>{{report['now'][0]}}</a></h4>
+        </div>
+    </div>
+
+    <div class='section border border-yellow'>
+        <div class='section-heading'>
+            <h2><span class='yellow'>#</span> ABOUT</h2>
+        </div>
+        <h4><span class='yellow'>| </span><a target="_blank"
+                href="https://open.spotify.com/user/ek144ueieeky8fiawq8lej3hm?si=gMviP5-PRmmcJpr03z9uFA">
+                <span class="yellow">[</span>Aidan's Spotify</a><span class="yellow">]</span> over the last </h4>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"><span class="yellow">[</span>{{report['period']}}<span
+                    class="yellow">]</span></button>
+            <div id="period-dropdown" class="border border-yellow dropdown-content">
+                <a href="/" class="u-yellow">week</a>
+                <a href="/30" clas="u-yellow">month</a>
+            </div>
+        </div>
+
+    </div>
+    <div class='section tracks border border-blue'>
+        <div class='section-heading'>
+            <h2><span class='blue'>#</span> TOP TRACKS</h2>
+        </div>
+
+        {%for track in report['tracks']%}
+        <h6 class=><span class='blue'>| </span><a target='_blank' href={{track[1]}}>{{track[0]}}</a></h6>
+        {%endfor%}
+    </div>
+
+    <div class='section artists border border-purple'>
+        <div class='section-heading'>
+            <h2><span class='purple'>#</span> TOP ARTISTS</h2>
+        </div>
+
+        {%for artist in report['artists']%}
+        <h6><span class='purple'>| </span><a target='_blank' href={{artist[1]}}>{{artist[0]}}</a></h6>
+        {%endfor%}
+    </div>
+
+
+    <div class='section artists border border-pink'>
+        <div class='section-heading'>
+            <h4><span class='pink'>#</span> CLICK SONG TO HEAR</h4>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
