@@ -1,4 +1,4 @@
-# what is aidan listening to ?
+# http://whatisaidanlisteningto.herokuapp.com/
 
 this website provides a summary of LastFM and Spotify data from my personal accounts
 
